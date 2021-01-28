@@ -27,6 +27,7 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
     "lint": "eslint ./src",
+    "lintout": "eslint ./src -o eslint-results.json -f json",
     "lintfix": "eslint ./src --fix"
   },
   "prettier": {
