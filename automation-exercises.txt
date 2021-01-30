@@ -1,29 +1,45 @@
 --------------------------------------
-Adding security plugin (SAST).
+Shifting Automation Left
 --------------------------------------
-Add "security" to plugins section of
-eslintrc.js
+
+--------------------------------------
+Install ESLint
+--------------------------------------
+npm i
+npm i -g eslint@7.18.0
 ======================================
 
 --------------------------------------
-Adding precommit hooks.
+Add vscode plugins
 --------------------------------------
+ESLint
+Jest
+Prettier
+======================================
 
-Step 1:
+--------------------------------------
+Configure Prettier
+--------------------------------------
 --------------------------------------
 - Copy between the lines
-- Add to package.json
+- Press f1
+- Type settings.json
+- Open settings.json
+- Paste inside
 --------------------------------------
-,
-"husky": {
-  "hooks": {
-    "pre-commit": "npm run lintfix",
-    "pre-push": "npm run test"
-  }
-}
---------------------------------------
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.eol": "\r\n",
+  "editor.renderControlCharacters": false
+======================================
 
-Step 2:
+--------------------------------------
+Adding ESLint react
+--------------------------------------
 --------------------------------------
 - Copy between the lines
 - Add to eslintrc.js
@@ -44,5 +60,38 @@ Step 2:
     linkComponents: ["Hyperlink", { name: "Link", linkAttribute: "to" }],
   },
 --------------------------------------
+======================================
 
+--------------------------------------
+Adding security plugin (SAST).
+--------------------------------------
+Add "security" to plugins section of
+eslintrc.js
+======================================
+
+--------------------------------------
+Adding precommit hooks.
+--------------------------------------
+--------------------------------------
+- Copy between the lines
+- Add to package.json
+--------------------------------------
+,
+"husky": {
+  "hooks": {
+    "pre-commit": "npm run lintfix",
+    "pre-push": "npm run test"
+  }
+}
+--------------------------------------
+======================================
+
+--------------------------------------
+Fixing Broken Tests
+--------------------------------------
+--------------------------------------
+Broken Unit Tests
+--------------------------------------
+- Go to ./src/logic/isNumber.js
+- Change "a" to "1"
 ======================================
