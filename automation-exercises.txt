@@ -1,0 +1,48 @@
+--------------------------------------
+Adding security plugin (SAST).
+--------------------------------------
+Add "security" to plugins section of
+eslintrc.js
+======================================
+
+--------------------------------------
+Adding precommit hooks.
+--------------------------------------
+
+Step 1:
+--------------------------------------
+- Copy between the lines
+- Add to package.json
+--------------------------------------
+,
+"husky": {
+  "hooks": {
+    "pre-commit": "npm run lintfix",
+    "pre-push": "npm run test"
+  }
+}
+--------------------------------------
+
+Step 2:
+--------------------------------------
+- Copy between the lines
+- Add to eslintrc.js
+--------------------------------------
+  settings: {
+    react: {
+      createClass: "createReactClass",
+      pragma: "React",
+      fragment: "Fragment",
+      version: "detect",
+      flowVersion: "0.53",
+    },
+    propWrapperFunctions: [
+      "forbidExtraProps",
+      { property: "freeze", object: "Object" },
+      { property: "myFavoriteWrapper" },
+    ],
+    linkComponents: ["Hyperlink", { name: "Link", linkAttribute: "to" }],
+  },
+--------------------------------------
+
+======================================
