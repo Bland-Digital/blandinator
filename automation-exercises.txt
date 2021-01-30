@@ -3,7 +3,7 @@ Shifting Automation Left
 --------------------------------------
 
 --------------------------------------
-Install ESLint
+Install project dependencies & ESLint
 --------------------------------------
 npm i
 npm i -g eslint@7.18.0
